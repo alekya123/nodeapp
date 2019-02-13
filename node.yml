@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: plpacjirapod
+  labels:
+    app: plpacjira
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: plpacjira
+    spec:
+      containers:
+      - image: registry.ng.bluemix.net/liberty_test/node
+        name: plpacjirapod
+        imagePullPolicy: Always 
